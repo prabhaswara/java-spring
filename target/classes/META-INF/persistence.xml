@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">-->
+<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+  <persistence-unit name="com.gune.latihan_LatihanGune_war_1.0PU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.ejb.HibernatePersistence</provider>
+    <class>com.gune.latihan.domain.Karyawan</class>
+   
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>      
+      <property name="hibernate.show_sql" value="true"/>
+      <!--
+      <property name="hibernate.connection.username" value="scott"/>
+      <property name="hibernate.connection.driver_class" value="oracle.jdbc.OracleDriver"/>
+      <property name="hibernate.connection.password" value="tiger"/>
+      <property name="hibernate.connection.url" value="jdbc:oracle:thin:@172.18.2.174:1521:IBOC"/>
+
+      <property name="hibernate.connection.username" value="iboc"/>
+      <property name="hibernate.connection.driver_class" value="oracle.jdbc.OracleDriver"/>
+      <property name="hibernate.connection.password" value="iboc"/>
+      <property name="hibernate.connection.url" value="jdbc:oracle:thin:@192.168.68.103:1579:gwdev"/>
+      <property name="hibernate.connection.url" value="jdbc:oracle:thin:@192.168.68.103:1579:gwuat"/>-->
+      <!--
+      <property name="hibernate.connection.username" value="iboc"/>
+      <property name="hibernate.connection.driver_class" value="oracle.jdbc.OracleDriver"/>
+      <property name="hibernate.connection.password" value="iboc"/>
+      <property name="hibernate.connection.url" value="jdbc:oracle:thin:@192.168.68.103:1579:gwuat"/>
+      -->
+      </properties>
+    
+<!--    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/hibnatedb?zeroDateTimeBehavior=convertToNull"/>
+      <property name="javax.persistence.jdbc.password" value=""/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+    </properties>-->
+  </persistence-unit>
+</persistence>
